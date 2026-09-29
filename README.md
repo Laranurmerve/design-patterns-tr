@@ -2,6 +2,14 @@
 
 ### C# Design Patterns'ı Türkçe öğrenmek için hazırlanmış sade ve uygulama odaklı bir web sitesi.
 
+<p align="center">
+
+<a href="https://design-patterns-tr.vercel.app/">
+  <strong>🌐 Web Sitesini Gör →</strong>
+</a>
+
+</p>
+
 ---
 
 ## ✨ Proje Hakkında
@@ -26,14 +34,6 @@ Sitede tasarım kalıpları;
 🔹 Avantajlar ve dezavantajlar
 
 başlıkları üzerinden anlatılmaktadır.
-
-Proje şu anda 6 tasarım kalıbı ile başlamış olup zaman içerisinde genişletilecektir.
-
----
-
-## 🌐 Web Sitesi
-
-🚧 Yakında yayınlanacak.
 
 ---
 
