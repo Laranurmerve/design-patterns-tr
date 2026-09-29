@@ -1,16 +1,44 @@
-# React + Vite
+# 📘 Design Patterns TR
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+### C# Design Patterns'ı Türkçe öğrenmek için hazırlanmış sade ve uygulama odaklı bir web sitesi.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Proje Hakkında
 
-## React Compiler
+Design Patterns TR, C# ile tasarım kalıplarını öğrenmek isteyenler için geliştirdiğim bir eğitim ve öğrenme projesidir.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tasarım kalıpları sade Türkçe anlatımlar, gerçek hayat örnekleri ve C# kodları üzerinden ele alınmaktadır.
 
-## Expanding the Oxlint configuration
+> 🎯 Amaç: Design Patterns konusunu karmaşıklaştırmadan, anlaşılır ve uygulamaya dönük bir şekilde öğrenilebilir hale getirmek.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## 📚 İçerik
+
+Sitede tasarım kalıpları;
+
+🔹 Problem
+🔹 Ne zaman kullanılmalı?
+🔹 Gerçek hayat örneği
+🔹 C# kod örneği
+🔹 Kod açıklaması
+🔹 Avantajlar ve dezavantajlar
+
+başlıkları üzerinden anlatılmaktadır.
+
+Proje şu anda 6 tasarım kalıbı ile başlamış olup zaman içerisinde genişletilecektir.
+
+---
+
+## 🌐 Web Sitesi
+
+🚧 Yakında yayınlanacak.
+
+---
+
+## 👩🏻‍💻 Geliştirici
+
+**Lara Nur Merve**
+
+Bu proje öğrenme sürecimin bir parçası olarak geliştirilmektedir.
