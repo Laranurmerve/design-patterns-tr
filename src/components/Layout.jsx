@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import {
 BookOpen,
-ChevronDown,
 Menu,
 Moon,
 Sun,
 X,
 } from "lucide-react";
 import { patterns } from "../data/patterns";
+import ChatPanel from "./ChatPanel";
 
 const Layout = () => {
 const [darkMode, setDarkMode] = useState(() => {
@@ -16,7 +16,6 @@ return localStorage.getItem("theme") === "dark";
 });
 
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const [patternsOpen, setPatternsOpen] = useState(false);
 
 const location = useLocation();
 
@@ -35,7 +34,6 @@ if (darkMode) {
 
 useEffect(() => {
 setMobileMenuOpen(false);
-setPatternsOpen(false);
 }, [location.pathname]);
 
 const toggleDarkMode = () => {
@@ -69,40 +67,6 @@ return ( <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 
         >
           Ana Sayfa
         </Link>
-
-        <div className="relative">
-          <button
-            type="button"
-            onClick={() => setPatternsOpen((current) => !current)}
-            className="flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
-          >
-            Kalıplar
-            <ChevronDown
-              size={16}
-              className={`transition-transform ${
-                patternsOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          {patternsOpen && (
-            <div className="absolute right-0 mt-2 w-64 rounded-xl border border-gray-200 bg-white p-2 shadow-xl dark:border-gray-700 dark:bg-gray-800">
-              {patterns.map((pattern) => (
-                <Link
-                  key={pattern.id}
-                  to={`/pattern/${pattern.id}`}
-                  className="block rounded-lg px-3 py-2 text-sm text-gray-700 transition hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-                >
-                  <div className="font-medium">{pattern.name}</div>
-
-                  <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                    {pattern.category}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
 
         <button
           type="button"
@@ -164,6 +128,8 @@ return ( <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 
   </header>
 
   <Outlet />
+
+  <ChatPanel />
 
   <footer className="border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
     <div className="mx-auto max-w-7xl px-4 py-8 text-center sm:px-6 lg:px-8">
