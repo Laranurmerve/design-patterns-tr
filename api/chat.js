@@ -13,6 +13,8 @@ export default async function handler(req, res) {
   }
 
   try {
+    const WELCOME_TEXT =
+      "Merhaba! Design Patterns TR asistaniyim. Factory, Singleton, Strategy gibi kaliplar, C# ornekleri veya OOP hakkinda sorabilirsin.";
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body || {};
     const message = typeof body.message === "string" ? body.message.trim() : "";
     const history = Array.isArray(body.history) ? body.history.slice(-10) : [];
@@ -72,7 +74,13 @@ export default async function handler(req, res) {
       { role: "user", parts: [{ text: systemPrompt }] },
       { role: "model", parts: [{ text: "Anladım. Design Patterns TR asistanı olarak Türkçe, C# odaklı ve eğitici cevaplar vereceğim." }] },
       ...history
-        .filter((m) => m && typeof m.text === "string" && (m.role === "user" || m.role === "assistant"))
+        .filter(
+          (m) =>
+            m &&
+            typeof m.text === "string" &&
+            (m.role === "user" || m.role === "assistant") &&
+            m.text !== WELCOME_TEXT
+        )
         .map((m) => ({
           role: m.role === "assistant" ? "model" : "user",
           parts: [{ text: m.text.slice(0, 2000) }],
@@ -87,7 +95,7 @@ export default async function handler(req, res) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents,
-          generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
+          generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
         }),
       }
     );
